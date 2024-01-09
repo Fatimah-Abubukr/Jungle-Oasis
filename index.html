@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Jungle Oasis</title>
+    <!-- linking external css styles sheet for styling in the HTML -->
+    <link rel="stylesheet" href="css/animal.css">
+    <!-- including the p5.js library -->
+    <script src="javascript/p5.js"></script>
+    <!-- including a javascript file for animal functionality -->
+    <script src="javascript/animal.js"></script>
+    <!-- defining animal functions to update the HTML elements with different properties of each animal, including images, description and sound -->
+    <script>
+        function showJungle()
+        {
+            document.getElementById("animal-description").innerText = animalDescriptionFinder('jungle');
+            document.getElementById("animal-image-hiddenField").value = animalImageFinder('jungle');
+            document.getElementById("hiddenField").value = animalSoundFinder('jungle');
+        }
+
+        function showLion()
+        {
+            document.getElementById("animal-description").innerText = animalDescriptionFinder('lion');
+            document.getElementById("animal-image-hiddenField").value = animalImageFinder('lion');
+            document.getElementById("hiddenField").value = animalSoundFinder('lion');
+        }
+
+        function showPanda()
+        {
+            document.getElementById("animal-description").innerText = animalDescriptionFinder('panda');
+            document.getElementById("animal-image-hiddenField").value = animalImageFinder('panda');
+            document.getElementById("hiddenField").value = animalSoundFinder('panda');
+        }
+
+        function showTiger()
+        {
+            document.getElementById("animal-description").innerText = animalDescriptionFinder('tiger');
+            document.getElementById("animal-image-hiddenField").value = animalImageFinder('tiger');
+            document.getElementById("hiddenField").value = animalSoundFinder('tiger');
+        }
+
+        function showChimpanzee()
+        {
+            document.getElementById("animal-description").innerText = animalDescriptionFinder('chimpanzee');
+            document.getElementById("animal-image-hiddenField").value = animalImageFinder('chimpanzee');
+            document.getElementById("hiddenField").value = animalSoundFinder('chimpanzee');
+        }
+
+        function showElephant()
+        {
+            document.getElementById("animal-description").innerText = animalDescriptionFinder('elephant');
+            document.getElementById("animal-image-hiddenField").value = animalImageFinder('elephant');
+            document.getElementById("hiddenField").value = animalSoundFinder('elephant');
+        }
+
+        function showPenguin()
+        {
+            document.getElementById("animal-description").innerText = animalDescriptionFinder('penguin');
+            document.getElementById("animal-image-hiddenField").value = animalImageFinder('penguin');
+            document.getElementById("hiddenField").value = animalSoundFinder('penguin');
+        }
+
+        // function playing the animal sound with using the HTML 'Audio' API
+
+        function playAnimalSound()
+        {
+           var soundName =  document.getElementById("hiddenField").value;
+           var audio = new Audio(soundName);
+           audio.play();
+        }
+    </script>
+</head>
+<!-- calling the 'showJungle()' function and having it 'onload' when refreshing the page -->
+<body onload="showJungle()">
+<!-- making an HTML class 'top-panel' which loads a panel at the top of page with an image a welcome to the users -->
+<div class="top-panel">
+    <img src="images/tropical.png" alt="Left Image" style="width: 105px; height: 105px;">
+    <h1>Welcome to the Jungle Oasis</h1>
+</div>
+<!-- creating a navigation bar containing an unordered list of animals as list items -->
+<!-- each list item containing an 'onclick' attribute to calling the corresponding javascript function -->
+<nav>
+    <ul>
+        <li><button onclick='showJungle()'><b><u>Home</u></b></button></li>
+        <li><button onclick='showLion()'><b><u>Lions</u></b></button></li>
+        <li><button onclick='showPanda()'><b><u>Pandas</u></b></button></li>
+        <li><button onclick='showTiger()'><b><u>Tigers</u></b></button></li>
+        <li><button onclick='showChimpanzee()'><b><u>Chimpanzees</u></b></button></li>
+        <li><button onclick='showElephant()'><b><u>Elephants</u></b></button></li>
+        <li><button onclick='showPenguin()'><b><u>Penguins</u></b></button></li>
+    </ul>
+</nav>
+
+<!-- an empty heading element to display the animal's description -->
+<h1 id="animal-description"></h1>
+<!-- using a hidden input field containing the path of the current animal's image -->
+<input id="animal-image-hiddenField" type="hidden" value="">
+<input id="animal-image-hiddenField1" type="hidden" value="">
+<!-- including the p5. script file -->
+<script src="javascript/animal-p5.js"></script>
+<!--  using a hidden input field storing the current animal's sound -->
+<!-- passing identifiers for records which need to updated through each page -->
+<input id="hiddenField" type="hidden">
+<!-- making a button so when it is clicked, the 'playAnimalSound()' function plays  the corrects sound for the animal -->
+<button id="animal-sound" style="background-color: #8b4513; color: #ffffff; width: 200px; height: 60px;" onclick='playAnimalSound()'><b>Play Me</b></button>
+
+</body>
+</html>

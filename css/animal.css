@@ -1,0 +1,103 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    /* Setting a background color for the body */
+    background-color: #306030 ;
+
+}
+
+#animal-p5 {
+   position: absolute;
+   bottom: 0;
+}
+
+.top-panel {
+    background-color: #004225;
+    color: white;
+    padding: 15px;
+    text-align: center;
+}
+
+nav {
+    background-color: #8b4513;
+    overflow: hidden;
+    text-align: center;
+}
+
+/* Style for the unordered list within the navigation bar */
+nav ul {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    display: inline-block;
+}
+
+/* Style for items in the navigation bar */
+nav li
+{
+    display: inline-block;
+    margin-right: 20px;
+}
+
+/* Style for the buttons within the navigation bar */
+nav button
+{
+    display: block;
+    padding: 14px 16px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 8px;
+}
+
+/* Style for hovering button effect within the navigation bar */
+nav button:hover {
+    background-color: #45a049;
+}
+
+/* Style for the top-panel image */
+.top-panel img
+{
+    position: absolute;
+    top: 0;
+    left: 0;
+    max-height: 500px;
+}
+
+/* Style for the canvas element */
+canvas
+{
+  display: block;
+  margin: 0 auto;
+  margin-top: -70px;
+  max-width: 100%;
+}
+
+/* Style for the animal descriptions */
+#animal-description
+{
+    font-family: 'Arial', sans-serif;
+    font-size: 20px;
+    color: #ffffff;
+    margin-top: 20px;
+    padding: 10px;
+}
+
+/* Style for the animal images */
+#animal-image
+{
+    max-width: 100%;
+    height: auto;
+    margin-top: 20px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 20px;
+}
+
